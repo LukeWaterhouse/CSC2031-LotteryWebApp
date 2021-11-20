@@ -1,1 +1,72 @@
 
+# Lottery Web App (Security Principles)
+
+This project was a part of my Security programming paradigms module at University and although the development framework is quite outdated it gave me good practice of some core security principles
+
+# Setup
+
+## RUN EVERYTHING ON DOCKER - (USE THE DOCKER-COMPOSE.YML FILE)
+
+If you want to run both Tomcat Server and MySQL on Docker the docker-compose.yml file which will do everything for you. 
+
+
+
+The docker-compose.yml will set up both Tomcat Server and MySql database server in one go and create a Docker network. To run the file open a terminal in the CSC2031 Coursework folder (containing this README file) and simply run:
+
+>> docker-compose up 
+
+You should see a lot of commands appearing in the terminal as this are set up. Once you see something like below everything should be good to go:
+
+>> ready for connections. Version: '8.0.21'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+
+
+## ACCESS WEB APP
+
+Open a browser and head to http://localhost:44444
+
+## SHUT DOWN DOCKER
+
+When you have finished using Docker it is best to stop it. 
+
+1. On the terminal hit CTRL-C to get a prompt
+
+2. >> docker-compose down
+
+
+## RUNNING LOCAL TOMCAT SERVER WITH MYSQL IN DOCKER
+
+If you are running a local tomcat server during development and mysql database in Docker then instructions to run the database are in the MySQL Database folder (README FILE)
+
+IMPORTANT: You will need to use the following URL in your Java code if running a local tomcat server on your computer and MySQL in Docker. This needs to be used in all your Java Servlets which are connecting to the mysql database
+
+String DB_URL = "jdbc:mysql://localhost:33333/lottery";
+
+You can add a local tomcat server to your project in IntelliJ.
+
+1. Select IntelliJ IDEA -> Preferences -> Build, Execution, Deployment -> Application Servers
+2. Click the + to add new server and follow instructions. You will need to point to the location of where your tomcat download is in your directory (tomcat home).
+3. Get MYSQL docker image running
+4. In IntelliJ hit run (green triangle) - your web app should deploy onto tomcat for you and open in a browser.
+5. To stop tomcat in IntelliJ hit stop (red square)
+
+
+## RUNNING LOCAL TOMCAT SERVER AND MYSQL DATABASE SERVER
+
+If you are running a local tomcat server and MySQL database server during development you will need to use the following URL. This needs to be used in all your Java Servlets which are connecting to the mysql database
+
+String DB_URL = "jdbc:mysql://localhost:3306/lottery";
+
+## Screenshots
+
+![image](https://user-images.githubusercontent.com/51091532/142720770-7d8c9e11-4922-401e-8f9f-78fb30708068.png)
+
+
+![image](https://user-images.githubusercontent.com/51091532/142720819-f120eaeb-3e70-40af-b183-b654fe091325.png)
+
+
+![image](https://user-images.githubusercontent.com/51091532/142720832-58ee4544-26d5-4244-b548-9bdb21c41fe9.png)
+
+![image](https://user-images.githubusercontent.com/51091532/142720859-b3e154b2-47bc-4614-8a45-b1ce8640a144.png)
+
+
+
