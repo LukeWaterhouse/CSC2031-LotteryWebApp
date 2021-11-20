@@ -5,7 +5,7 @@ This project was a part of my Security programming paradigms module at Universit
 
 # Setup
 
-## RUN EVERYTHING ON DOCKER - (USE THE DOCKER-COMPOSE.YML FILE)
+## RUN EVERYTHING ON DOCKER - (USE THE DOCKER-COMPOSE.YML FILE) - (RECCOMENDED)
 
 If you want to run both Tomcat Server and MySQL on Docker the docker-compose.yml file which will do everything for you. 
 
